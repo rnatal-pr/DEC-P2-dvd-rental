@@ -1,11 +1,11 @@
 decproj2:
   outputs:
     dev:
-      account: xkofovp-cpb51387
-      database: dw1
+      account: qmhfgsd-vf52355
+      database: dvd_rentals
       password: '{{ env_var("SNOWFLAKE_PASSWORD") }}'
       role: accountadmin
-      schema: raw
+      schema: public
       threads: 10
       type: snowflake
       user: '{{ env_var("SNOWFLAKE_USERNAME") }}'

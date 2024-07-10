@@ -2,8 +2,8 @@ version: 2
 
 sources:
  - name: dvd_rental
-   database: dw1
-   schema: raw
+   database: dvd_rentals
+   schema: public
    tables:
     - name: address
       columns:
