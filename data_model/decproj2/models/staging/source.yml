@@ -1,0 +1,23 @@
+version: 2
+
+sources:
+ - name: dvd_rental
+   database: dw1
+   schema: raw
+   tables:
+    - name: address
+      columns:
+        - name: address
+          quote: true
+    - name: category
+      columns:
+        - name: name
+          quote: true
+    - name: city
+    - name: country
+    - name: customer
+    - name: film
+    - name: film_category
+    - name: inventory
+    - name: rental
+    - name: payment
