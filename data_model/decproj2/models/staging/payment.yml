@@ -1,0 +1,12 @@
+models:
+  - name: payment
+    columns:
+      - name: payment_id
+        tests:
+        - unique
+        - not_null
+      - name: rental_id
+        tests:
+        - relationships:
+            to: ref('rental')
+            field: rental_id

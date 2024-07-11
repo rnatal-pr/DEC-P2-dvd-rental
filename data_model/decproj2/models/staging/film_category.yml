@@ -1,0 +1,12 @@
+models:
+  - name: film_category
+    columns:
+      - name: film_id
+        tests:
+        - unique
+        - not_null
+      - name: category_id
+        tests:
+        - relationships:
+            to: ref('category')
+            field: category_id

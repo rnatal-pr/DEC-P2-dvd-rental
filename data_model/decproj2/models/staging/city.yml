@@ -1,0 +1,13 @@
+models:
+  - name: city
+    columns:
+      - name: city_id
+        tests:
+        - unique
+        - not_null
+      - name: country_id
+        tests:
+        - not_null
+        - relationships:
+            to: ref('country')
+            field: country_id

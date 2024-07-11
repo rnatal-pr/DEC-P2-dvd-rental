@@ -6,7 +6,7 @@ select
     address2,
     district,
     city_id,
-    postal_code,
-    phone,
+    cast(postal_code as varchar) as postal_code,
+    cast(phone as varchar) as phone,
     last_update
 from {{ source('dvd_rental','address') }}
