@@ -1,7 +1,7 @@
 {{ config(materialized='table') }}
 
 SELECT
-    {{ dbt_utils.generate_surrogate_key(['inventory_id']) }} as invnetory_key,
+    {{ dbt_utils.generate_surrogate_key(['inventory_id']) }} as inventory_key,
     inventory_id,
     inv_tab.film_id,
     cat_tab.category_id
