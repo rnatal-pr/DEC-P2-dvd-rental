@@ -1,0 +1,13 @@
+decproj2:
+  outputs:
+    dev:
+      account: qmhfgsd-vf52355
+      database: dvd_rentals
+      password: '{{ env_var("SNOWFLAKE_PASSWORD") }}'
+      role: accountadmin
+      schema: public
+      threads: 10
+      type: snowflake
+      user: '{{ env_var("SNOWFLAKE_USERNAME") }}'
+      warehouse: xsmall_wh
+  target: dev
