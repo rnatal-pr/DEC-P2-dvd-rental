@@ -15,7 +15,7 @@ SELECT
     rating,
     fulltext,
     special_features,
---    name as category_name,
+    name as category_name,
     film_tab.last_update
 FROM {{ ref('inventory') }} as inv_tab
 LEFT JOIN {{ ref('film') }} as film_tab

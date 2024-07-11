@@ -11,7 +11,7 @@ SELECT
     email,
     activebool,
     active,
---    address,
+    address,
     address2,
     district,
     postal_code,

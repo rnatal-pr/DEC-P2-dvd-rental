@@ -2,6 +2,6 @@
 
 select
     category_id,
---    "name",
+    name,
     last_update
 from {{ source('dvd_rental','category') }}
