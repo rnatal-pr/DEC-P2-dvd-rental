@@ -1,0 +1,23 @@
+models:
+  - name: customer
+    columns:
+      - name: customer_id
+        tests:
+        - unique
+        - not_null
+      - name: address_id
+        tests:
+        - unique
+        - relationships:
+                    to: ref('address')
+                    field: address_id
+      - name: activebool
+        tests:
+        - accepted_values:
+            values: [0,1]
+            quote: false
+      - name: active
+        tests:
+        - accepted_values:
+            values: [TRUE,FALSE]
+            quote: false

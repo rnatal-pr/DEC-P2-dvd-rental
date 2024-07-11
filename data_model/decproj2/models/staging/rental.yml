@@ -1,0 +1,23 @@
+models:
+  - name: rental
+    columns:
+      - name: rental_id
+        tests:
+        - unique
+        - not_null
+      - name: rental_date
+        tests:
+        - not_null
+      - name: inventory_id
+        tests:
+        - not_null
+        - relationships:
+            to: ref('inventory')
+            field: inventory_id
+      - name: customer_id
+        tests:
+        - not_null
+        - relationships:
+            to: ref('customer')
+            field: customer_id
+        

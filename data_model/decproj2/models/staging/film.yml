@@ -1,0 +1,14 @@
+models:
+  - name: film
+    columns:
+      - name: film_id
+        tests:
+        - unique
+        - not_null
+        - relationships:
+                    to: ref('film_category')
+                    field: film_id
+      - name: rating
+        tests:
+        - accepted_values:
+            values: ['G','PG','PG-13','R','NC-17']
