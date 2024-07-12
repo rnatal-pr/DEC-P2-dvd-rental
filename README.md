@@ -24,9 +24,13 @@ You will need dbt-core and dbt-snowflake packages installed.
 The dbt data model is named decproj2 and is stored in the data_model/decproj2 directory of this repo. 
 
 Step 1 - On your snowflake account make sure you have a database loaded with a schema with the tables you want to use(data ingestion would get you here). Make sure you have assigned a warehouse and warehouse name you want to use and are using the accountadmin role.
+
 Step 2 - Configure the `profiles.yml` file with your snowflake credentials. Replace the `account` with your snowflake account, the `database` with your database name in snowflake, the `schema` with your schema in the snowflake db, and your `warehouse` name you want to use on your snowflake account.
+
 Step 3 - Set local environment variables `SNOWFLAKE_PASSWORD` and `SNOWFLAKE_USERNAME` in your machine's terminal to your snowflake account's credentials.
+
 Step 4 - navigate (cd) to the `decproj2` directory and run `dbt deps` to install dependent packages, `dbt debug` to ensure your snowflake connection it working, and `dbt test` to make sure all requirements of the data are being met for the transformations to work.
+
 Step 5 - run `dbt run` to run the transformation! They should appear in your snowflake database now.
 
 ## Data Orchestration
