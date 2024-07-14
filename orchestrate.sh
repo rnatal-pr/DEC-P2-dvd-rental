@@ -1,0 +1,1 @@
+python -m integrate.pipelines.airbyte_extract_load && cd data_model/decproj2 && dbt deps && dbt run
