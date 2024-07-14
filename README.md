@@ -34,3 +34,7 @@ Step 4 - navigate (cd) to the `decproj2` directory and run `dbt deps` to install
 Step 5 - run `dbt run` to run the transformation! They should appear in your snowflake database now.
 
 ## Data Orchestration
+We used a bash script named orchestrate.sh for orchestration.  This orchestrator responsible for running the workflow and calling each step in the correct order.
+
+## BI Tool: Preset
+Preset is the BI tool we chose to create visualizations and analysis of our transformed data.
