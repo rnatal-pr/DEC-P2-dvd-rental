@@ -10,6 +10,12 @@ We are using airbyte to ingest data into snowflake where dbt will be used for da
 
 ## Data Integration
 
+Source: Data Ingested from DVD Rentals data (hosted in AWS - RDS) using Airbyte.
+
+Destination: Data Ingested to Snowflake. Database & Schema were created first in order to have a clean connection. 
+
+Connection: Connection was established from Postgres to Snowflake through the use of Airbyte & Sync Modes were assigned to "Incremental Sync - Append + Deduped".
+
 
 ## Data Transformation
 These transformations will create a staging schema called `staging` where only relavant tables from the dvd_rentals database will appear which have been cleaned and tested(unique, not null, relationships, and accepted values) to ensure transformations will work.
@@ -38,3 +44,15 @@ We used a bash script named orchestrate.sh for orchestration.  This orchestrator
 
 ## BI Tool: Preset
 Preset is the BI tool we chose to create visualizations and analysis of our transformed data.
+
+![Solution Architechture Graph](media/P2-Dashboard.png)
+
+Visualization created for DVD Rental data filtered solely for United States. These charts were created in Preset from a OBT generated from report_rental.sql. 
+
+Chart #1: Top Categoriers - Bar Chart
+
+Chart #2: Average Rental Days per Categories - Line Chart
+
+Chart #3: Rentals by Rating - Treemap 
+
+Metrics used Preset: Count(RENTAL_ID) & Avg(RENTAL_DURATION)
